@@ -1,5 +1,6 @@
 // import { aboutToggle, exampleTogggle, setTasksToggle} from "./buttons.js";
-
+// import {Tasks} from "./Tasks.js";
+import { UI } from "./UI.js";
 
 // About functionality
 
@@ -65,28 +66,6 @@ function setTasksToggle() {
 
 // Variables for 
 
-let task = document.getElementById("task_goal").value;
-const specifics = document.getElementById("specifics").value;
-const startTime = document.getElementById("start_time").value;
-
-console.log(startTime)
-
-let startTimeArr = startTime.split(":");
-let startTimeHour = Number(startTimeArr[0]);
-let startTimeMinutes = Number(startTimeArr[1]);
-
-const targetStartTime = new Date();
-let targetStartHour = targetStartTime.getHours();
-targetStartHour = Number(targetStartHour);
-let targetStartMinutes = targetStartTime.getMinutes();
-targetStartMinutes = Number(targetStartMinutes);
-
-const hours = Number(document.getElementById("hours").value);
-const minutes = Number(document.getElementById("minutes").value);
-
-const rating = 0;
-
-
 function logTask() { 
     
 
@@ -128,10 +107,40 @@ function clearForm() {
 
 
 // Timers / Countdowns
+// console.log(targetStartHour);
+// console.log(targetStartMinutes);
+
+const task = document.getElementById("task_goal").value;
+const specifics = document.getElementById("specifics").value;
+const startTime = document.getElementById("start_time").value;
+
+
+addBtn.addEventListener('click', () => {
+
+
+    const ui = new UI();
+    ui.TasksModal({ task: 'testing', specifics: 'something'})
+})
+
+
+
+let startTimeArr = startTime.split(":");
+let startTimeHour = Number(startTimeArr[0]);
+let startTimeMinutes = Number(startTimeArr[1]);
+console.log(startTime)
 console.log(startTimeHour);
 console.log(startTimeMinutes);
-console.log(targetStartHour);
-console.log(targetStartMinutes);
+
+// current time
+// const targetStartTime = new Date();
+// let targetStartHour = targetStartTime.getHours();
+// let targetStartMinutes = targetStartTime.getMinutes();
+
+
+const hours = Number(document.getElementById("hours").value);
+const minutes = Number(document.getElementById("minutes").value);
+
+const rating = 0;
 
 let timer;
 let totalStartMinutes = ((startTimeHour * 60) + startTimeMinutes);
@@ -153,21 +162,21 @@ if (countdownToStart <= 0) {
 if (countdownToStart <= 0 && timer > 0) displayTask = true
 
 
-displayTask = false;
+// displayTask = false;
 
-while (displayTask == true) {
-    let taskDisplay = document.getElementById("display_task");
-    taskDisplay.innerHTML = `
-    <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Tasks</div>
-    <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Specifics</div>
-    <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Timer</div>
-    `;
-    // taskDisplay.innerHTML = `
-    // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${Tasks.task}</div>
-    // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${Tasks.specifics}</div>
-    // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${timer}</div>
-    // `
+// while (displayTask == true) {
+//     let taskDisplay = document.getElementById("display_task");
+//     taskDisplay.innerHTML = `
+//     <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Tasks</div>
+//     <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Specifics</div>
+//     <div id="current_task" class="container-fluid, border border-primary, rounded-4,current_task">Timer</div>
+//     `;
+//     // taskDisplay.innerHTML = `
+//     // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${Tasks.task}</div>
+//     // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${Tasks.specifics}</div>
+//     // <div id="current_task" class="container-fluid, border border-primary, rounded-4, current_task">${timer}</div>
+//     // `
 
-    taskDisplay.appendChild(taskDisplay);
+//     taskDisplay.appendChild(taskDisplay);
 
-    }
+//     }

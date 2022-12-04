@@ -1,0 +1,127 @@
+/*import font here*/
+
+body {
+    background-color: bisque;
+    background: radial-gradient(circle, bisque 0%, rgb(243, 169, 78) 50%, rgb(214, 134, 35) 100%);
+    text-shadow: .7px .7px rgb(177, 227, 101);
+    font-weight: bolder;
+    margin: 5px;
+    
+}
+
+
+header {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    text-shadow: 5px darkslategray;
+    font-size: 20px;
+}
+
+span {
+    color: rgb(2, 97, 75);
+    font-size: 30px;
+}
+
+#quotes {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-color: rgb(2, 46, 46) !important;
+    border-radius: 5px;
+    border: 15px;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.quote.div {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-color: rgb(2, 46, 46) !important;
+    border-radius: 5px !important;
+    border: 5px !important;
+    text-align: center;
+}
+
+.functionality {
+    display: flex;
+    justify-content: center; 
+}
+
+.btn_about, .btn_set_tasks, .btn_example, .btn_log_task, .btn_log_percent {
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 1rem;
+    box-shadow: 30px;
+    background-color: rgb(1, 88, 88);
+    color: beige;
+}
+
+.btn_hide_about, .btn_hide_example, .btn_hide_set {
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 1rem;
+    box-shadow: 30px;
+    background-color: rgb(88, 5, 1);
+    color: beige;
+}
+
+#about_content, #example_content, #tasks_goals {
+    margin: 5px;
+    padding: 10px;
+    border-color: rgb(2, 46, 46);
+    border-radius: 5px;
+    border: 5px;  
+}
+
+
+#container-fluid {
+    margin: 5px;
+    padding: 5px;
+    border-color: rgb(2, 46, 46);
+    border-radius: 5px;
+    border: 5px;
+}
+
+p {
+    margin: 5px;
+    padding: 5px;
+    text-indent: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+#efficiency_box {
+    display: flex;
+    justify-content: center;
+    padding: .8rem;
+    width: 100%;
+    background: linear-gradient(to right, rgb(247, 250, 159), rgb(2, 189, 2));
+    cursor:crosshair;
+    border-radius: 8px;
+}
+
+#efficiency_box:hover {
+    border: 2px solid rgb(2, 85, 2)
+}
+
+/* #example_content {
+    display: flex;
+    justify-content: center;
+} */
+
+#current_task {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-color: rgb(2, 46, 46) !important;
+    border-radius: 5px;
+    border: 15px;
+    justify-content: center;
+    font-size: 20px;
+}

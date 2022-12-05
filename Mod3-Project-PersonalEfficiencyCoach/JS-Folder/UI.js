@@ -12,7 +12,6 @@ export class UI {
 
 
       modal.innerHTML = ` 
-
       
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content modal-dialog modal-dialog-centered mx-10 p-xl-5">

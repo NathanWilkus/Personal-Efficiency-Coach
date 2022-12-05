@@ -1,6 +1,6 @@
-// import { aboutToggle, exampleTogggle, setTasksToggle} from "./buttons.js";
 // import {Tasks} from "./Tasks.js";
-import { UI } from "./UI.js";
+// import { UI } from "./UI.js";
+// import { aboutToggle, exampleTogggle, setTasksToggle} from "./buttons.js";
 
 // About functionality
 
@@ -97,69 +97,69 @@ function logTask() {
     
 }
 
-function clearForm() {
-    task = "";
-    specifics = "";
-    startTime = "";
-    hours = "";
-    minutes = "";
-}
+// function clearForm() {
+//     task = "";
+//     specifics = "";
+//     startTime = "";
+//     hours = "";
+//     minutes = "";
+// }
 
 
 // Timers / Countdowns
 // console.log(targetStartHour);
 // console.log(targetStartMinutes);
 
-const task = document.getElementById("task_goal").value;
-const specifics = document.getElementById("specifics").value;
-const startTime = document.getElementById("start_time").value;
+// const task = document.getElementById("task_goal").value;
+// const specifics = document.getElementById("specifics").value;
+// const startTime = document.getElementById("start_time").value;
 
 
-addBtn.addEventListener('click', () => {
+// // addBtn.addEventListener('click', () => {
 
 
-    const ui = new UI();
-    ui.TasksModal({ task: 'testing', specifics: 'something'})
-})
+// //     const ui = new UI();
+// //     ui.TasksModal({ task: 'testing', specifics: 'something'})
+// // })
 
 
 
-let startTimeArr = startTime.split(":");
-let startTimeHour = Number(startTimeArr[0]);
-let startTimeMinutes = Number(startTimeArr[1]);
-console.log(startTime)
-console.log(startTimeHour);
-console.log(startTimeMinutes);
+// let startTimeArr = startTime.split(":");
+// let startTimeHour = Number(startTimeArr[0]);
+// let startTimeMinutes = Number(startTimeArr[1]);
+// console.log(startTime)
+// console.log(startTimeHour);
+// console.log(startTimeMinutes);
 
-// current time
+// // current time
 // const targetStartTime = new Date();
 // let targetStartHour = targetStartTime.getHours();
 // let targetStartMinutes = targetStartTime.getMinutes();
 
 
-const hours = Number(document.getElementById("hours").value);
-const minutes = Number(document.getElementById("minutes").value);
+// const hours = Number(document.getElementById("hours").value);
+// const minutes = Number(document.getElementById("minutes").value);
 
-const rating = 0;
+// const rating = 0;
 
-let timer;
-let totalStartMinutes = ((startTimeHour * 60) + startTimeMinutes);
-let totalTargetMinutes = ((targetStartHour * 60) + targetStartMinutes)
-let countdownToStart = (totalStartMinutes - totalTargetMinutes) * 60000;
-let displayTask = false;
+// let timer;
+// let totalStartMinutes = ((startTimeHour * 60) + startTimeMinutes);
+// let totalTargetMinutes = ((targetStartHour * 60) + targetStartMinutes)
+// let countdownToStart = (totalStartMinutes - totalTargetMinutes) * 60000;
+// let displayTask = false;
 
-// console.log(countdownToStart);
+// // console.log(countdownToStart);
 
-if (countdownToStart > 0) countdownToStart = setTimeout(displayCurrentTask, countdownToStart)
+// if (countdownToStart > 0) countdownToStart = setTimeout(displayCurrentTask, countdownToStart)
 
-if (countdownToStart <= 0) {
-    displayTask = true
-    timer = {
+// if (countdownToStart <= 0) {
+//     displayTask = true
+//     timer = {
 
-    }
-}
+//     }
+// }
 
-if (countdownToStart <= 0 && timer > 0) displayTask = true
+// if (countdownToStart <= 0 && timer > 0) displayTask = true
 
 
 // displayTask = false;
